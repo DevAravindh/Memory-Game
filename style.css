@@ -1,0 +1,117 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+body
+{
+    background: url(images/memory-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.memory 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 90vh;
+}
+.board 
+{
+    margin-left: 20px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(4,90px);
+    grid-template-rows: repeat(4,140px);
+    overflow: hidden;
+    height: 70%;
+}
+h1 
+{
+    color: rgb(236, 225, 225);
+    text-decoration: underline;
+}
+#board div 
+{
+    height: 120px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card 
+{
+    background-color: rgb(249, 246, 246);
+    transform: rotateX(180deg);
+    transition: 1s;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 3px solid rgb(166, 190, 214);
+}
+.card::after
+{
+    content:'?';
+    font-size: 2em;
+    transform: rotateX(180deg);
+    border-radius: 5px;
+    background-repeat:repeat;
+    font-style: italic;
+
+}
+img
+{
+    height: 90px;
+    width: 70px;
+    object-fit: fill;
+}
+.front
+{
+    background-color: #fff;
+    transition: 1.5s;
+    opacity: 5; 
+    border-radius: 5px;
+    object-fit: fill;
+    border: 3px solid rgb(166, 190, 214);
+}
+.wintext 
+{
+    color: rgb(241, 186, 180);
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    font-size: 2em;
+    font-style: oblique;
+}
+.btn 
+{
+    background-color: rgb(85, 85, 107);
+    height: 60px;
+    width: 110px;
+    font-size: 1.5em;
+    color: #ef7f7f;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    letter-spacing: 2px;
+}
+@media(max-width:800px)
+{
+    body
+    {
+        background: url(images/memory-2.jpg);
+        background-repeat:no-repeat;
+        background-size: cover;
+    }
+}
